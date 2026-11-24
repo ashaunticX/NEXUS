@@ -1,0 +1,32 @@
+[project]
+name = "nexus-decision-support"
+version = "0.1.0"
+description = "NEXUS deterministic decision-support application"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.162.0",
+    "httpx>=0.28.1",
+    "numpy>=2.5.4",
+    "pandas>=3.1.0",
+    "psycopg[binary]>=3.3.6",
+    "pypdf>=6.21.3",
+    "python-docx>=1.2.0",
+    "python-multipart>=0.0.32",
+    "reportlab>=5.1.0",
+    "scikit-learn>=1.9.1",
+    "sqlalchemy>=2.1.6",
+    "uvicorn>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = false
